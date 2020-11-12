@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registerManager/registerManager.css">
+    <link rel="stylesheet" href="registerManager/34.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+    <title>registerManager</title>
+</head>
+<body>
+ <!-- back popup -->
+    <div id="mainPopupDiv" class="mainPopupDiv">
+        <div class="innerPopupDiv">
+            <div class="top1">
+                <i><img style="height: 20px; width: 20px; margin-right: 10px;" onclick="hide()" src="cross.png" alt=""></i>
+                <b style="margin: 0px auto 0px auto;">Remove Manager</b> 
+            </div>
+            <div class="popupText">
+                <h3>All data Will be lost. Do you want to continue?</h3>
+            </div>
+
+            <div class="pButton">
+                <button onclick="hide()" class="btn-danger34">yes</button>
+                <button onclick="hide()" class="btn-success34">no</button>
+            </div>
+        </div>
+   </div>
+
+   <!-- continue popup -->
+   <div id="mainPopupDivContinue" class="mainPopupDiv">
+        <div class="innerPopupDiv">
+            <div class="top1">
+                <i><img style="height: 20px; width: 20px; margin-right: 10px; cursor: pointer;" onclick="hideContinue()" src="cross.png" alt=""></i>
+                <b style="margin: 0px auto 0px auto;">Confirm Registration</b> 
+            </div>
+            <div class="popupText">
+                <h3>Continue to Access Control?</h3>
+            </div>
+
+            <div class="pButton">
+                <button onclick="hideContinue(), res()" type="submit" form="myForm" class="btn-danger34">Leave default</button>
+                <button onclick="hideContinue()" class="btn-success34">Yes</button>
+                <button onclick="hideContinue()" class="btn-danger34">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+   <!-- calendar popup -->
+   
+
+    <div class="back">
+        <button onclick="change()" class="btn34">back</button>
+        </div>
+
+    <div class="topBar">
+        <b>Register Manager</b> 
+     </div>
+
+    <div class="mainDiv">
+
+        <form id="myForm" action="addManager" method="GET">
+        <div class="innerDiv">
+            <div><b>Employee ID</b></div>  <div class="inputDiv"><input  type="text" name="empId" ></div>
+        </div>
+
+        <div class="innerDiv">
+            <div><b>Name &nbsp;&nbsp;&nbsp;&nbsp;</b></div>  <div class="inputDiv"><input type="text" name="name" > </div>
+        </div>
+
+        
+        <div class="innerDiv">
+            <div><b>Contact Number &nbsp;</b></div>  <div class="inputDiv"><input type="text" style="margin-left: -28px;" name="cNum" > </div>
+        </div>
+
+     
+
+        <div class="innerDiv">
+            <div><b>NIC &nbsp;</b></div>  <div class="inputDiv"><input style="margin-left: 60px;" type="text" name="nic" > </div>
+        </div>
+        <input type="submit">
+    </form>
+       
+
+        
+    </div>
+
+    <div class="confirm">
+        <button onclick="showContinue()" class="btn34">confirm</button>
+    </div>
+    
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	var form = $('#myForm');
+	form.submit(function () {
+	 
+	$.ajax({
+	type: form.attr('method'),
+	url: form.attr('action'),
+	data: form.serialize()
+	
+	});
+	 
+	return false;
+	});
+});
+
+</script>
+   
+<script src="registerManager/registerManager.js"></script>
+<script src="calendar.js"></script>
+</body>
+</html>

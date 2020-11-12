@@ -1,0 +1,92 @@
+.calendar {
+  width: 500px;
+  height: 450px;
+  
+}
+
+.month {
+  padding: 40px 20px;
+  margin-bottom: 10px;
+  background: #03396c;
+  text-align: center
+}
+
+.month ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .nxt {
+  float: right;
+  padding-top: 10px;
+}
+
+
+.calendar-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.calendar-btn {
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  margin-top: 300px;
+  z-index: 9;
+
+
+}
+
+.calendar-btn button {
+  padding: 6px 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.calendarDiv {
+  display: none;
+}
+
+#calendarTable_1 {
+  display: block;
+}
+
+.td{
+    cursor: pointer;;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+.freeslot-table table th, td{
+   
+    padding: 8px;
+   
+ 
+    border-bottom: 1px solid #ddd;
+  
+}
+
+
+
+tr:hover {background-color:#f5f5f5;}
