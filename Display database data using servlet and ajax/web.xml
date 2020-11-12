@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+ 
+<servlet>
+	<servlet-name>addServlet</servlet-name>
+	<servlet-class>com.my.addServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>addServlet</servlet-name>
+	<url-pattern>/add</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>sqServlet</servlet-name>
+	<servlet-class>com.my.sqServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>sqServlet</servlet-name>
+	<url-pattern>/sq</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>dbServlet</servlet-name>
+	<servlet-class>com.my.AddtoDB</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>dbServlet</servlet-name>
+	<url-pattern>/addDB</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>ManagerS</servlet-name>
+	<servlet-class>com.my.AddManagerServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>ManagerS</servlet-name>
+	<url-pattern>/addManager</url-pattern>
+</servlet-mapping>
+
+
+</web-app>
